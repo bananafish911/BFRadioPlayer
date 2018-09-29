@@ -1,0 +1,16 @@
+PODS:
+  - BFRadioPlayer (0.1.0)
+
+DEPENDENCIES:
+  - BFRadioPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  BFRadioPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BFRadioPlayer: 14e9448aee6a0b73ea46749e5db8f9316f31f8a2
+
+PODFILE CHECKSUM: 5c76e5d5ad36a75a7fcb5056f19ba57b938cf7d2
+
+COCOAPODS: 1.5.3

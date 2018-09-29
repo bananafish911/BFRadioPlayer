@@ -1,0 +1,6 @@
+framework module BFRadioPlayer {
+  umbrella header "BFRadioPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

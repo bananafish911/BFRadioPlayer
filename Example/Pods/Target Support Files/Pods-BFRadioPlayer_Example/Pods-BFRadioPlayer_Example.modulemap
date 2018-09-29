@@ -1,0 +1,6 @@
+framework module Pods_BFRadioPlayer_Example {
+  umbrella header "Pods-BFRadioPlayer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
