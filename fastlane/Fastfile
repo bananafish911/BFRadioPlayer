@@ -18,7 +18,10 @@ default_platform(:ios)
 platform :ios do
   desc "Description of what the lane does"
   lane :build do |options|
-  	sh("cd ./Example")
+    workingDirectory(  
+        project_dir: './Example' 
+    ) 
+  	#sh("cd ./Example")
   	sh("pod install") 
     scheme = "BFRadioPlayer-Example"
     if options[:scheme]
