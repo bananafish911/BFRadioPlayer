@@ -4,8 +4,11 @@ matrix:
       language: swift
       osx_image: xcode10.0
       before_install:
-       - gem update cocoapods
+      # - gem update cocoapods
        - gem update fastlane
       env:
         - BRANCH_NAME=$TRAVIS_BRANCH
         - BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
+      script:
+       - chmod +x ./fastlane/Travis.sh
+       - ./fastlane/Travis.sh
