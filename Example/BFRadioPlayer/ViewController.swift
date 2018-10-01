@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var playerStateLabel: UILabel!
     
-    let defaultStreamUrl = URL(string: "http://8bit.fm:8000/live")!
+    let defaultStreamUrl = URL(string: "http://online-radioroks.tavrmedia.ua/RadioROKS")!
     var streamUrl: URL?
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: BFRadioPlayer.Notifications.stateChanged, object: nil, queue: nil) { (n) in
             let state = BFRadioPlayer.shared.state
             self.playerStateLabel.text = "\(state)"
-//            self.playPauseButton.isSelected = (state == .playing)
+            self.playPauseButton.isSelected = (state == .playing)
         }
         
         NotificationCenter.default.addObserver(forName: BFRadioPlayer.Notifications.nowPlayingInfoUpdated, object: nil, queue: nil) { (n) in
@@ -51,7 +51,6 @@ class ViewController: UIViewController {
             BFRadioPlayer.shared.stop()
         }
         BFRadioPlayer.shared.play()
-        
     }
     
 }

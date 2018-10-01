@@ -22,7 +22,6 @@ open class BFRadioPlayer: NSObject {
     public struct Notifications {
         public static let stateChanged = Notification.Name(rawValue: "BFRadioPlayer-stateChanged")
         public static let nowPlayingInfoUpdated = Notification.Name(rawValue: "BFRadioPlayer-nowPlayingInfoUpdated")
-        public static let streamUrlChanged = Notification.Name(rawValue: "BFRadioPlayer-streamUrlChanged")
     }
     
     /// Describes audio player state
@@ -51,7 +50,10 @@ open class BFRadioPlayer: NSObject {
     
     open var streamUrl: URL? {
         didSet {
-            NotificationCenter.default.postOnMainQueue(name: Notifications.streamUrlChanged, object: self, userInfo: ["value": streamUrl ?? ""])
+            playerItem = nil
+            if autoplay {
+                play()
+            }
         }
     }
     
@@ -67,6 +69,9 @@ open class BFRadioPlayer: NSObject {
             NotificationCenter.default.postOnMainQueue(name: Notifications.nowPlayingInfoUpdated, object: self, userInfo: info)
         }
     }
+    
+    /// automatically start playing after setting a stream URL
+    public var autoplay = false
     
     public var loadArtworks = true
     private lazy var artworkGetter = BFArtworkGetter()
@@ -222,8 +227,10 @@ open class BFRadioPlayer: NSObject {
         guard let metadataStr = metadata.last?.utf8String else { return }
         
         nowPlayingInfo = (title: metadataStr, artist: nil, artwork: nil)
-        artworkGetter.getArtworkImage(query: metadataStr) { (image) in
-            self.nowPlayingInfo = (title: metadataStr, artist: nil, artwork: image)
+        if loadArtworks {
+            artworkGetter.getArtworkImage(query: metadataStr) { (image) in
+                self.nowPlayingInfo = (title: metadataStr, artist: nil, artwork: image)
+            }
         }
     }
     
