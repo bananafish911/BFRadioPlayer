@@ -11,6 +11,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+If you are going to use http addresses (instead only https), you will need to change whitelist domains in your app by adding the following to your application's plist (often called "Info.plist"):
+```ruby
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key><true/>
+</dict>
+```
+
 ## Installation
 
 BFRadioPlayer is available through [CocoaPods](https://cocoapods.org). To install

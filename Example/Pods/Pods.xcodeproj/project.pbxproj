@@ -10,11 +10,14 @@
 		079EA705E4BD306B0729D056CB4D5234 /* BFRadioPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D452D5EF417E61EDC1F1405F518F8BA /* BFRadioPlayer-dummy.m */; };
 		0FF22C99A60029C1F9A48E76116496FE /* Pods-BFRadioPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EB000E9D247939D2C02B4DA0FB2262B /* Pods-BFRadioPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13129785759A8FF8DC9C276205EB9B8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		57A88CF4215FB00B00FD4FFB /* BFRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A88CF3215FB00B00FD4FFB /* BFRadioPlayer.swift */; };
+		57A88CF8215FBD9800FD4FFB /* BFArtworkGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A88CF7215FBD9800FD4FFB /* BFArtworkGetter.swift */; };
+		57A88CFA215FC36B00FD4FFB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A88CF9215FC36B00FD4FFB /* Reachability.swift */; };
+		57A88CFC215FD69100FD4FFB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A88CFB215FD69100FD4FFB /* Helpers.swift */; };
 		6A02FCC8017E71DC620516E683A81D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		7BE321CF3B92A2C122BF30B908E317A4 /* Pods-BFRadioPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 943573F50CE5272E84898EA69403B84E /* Pods-BFRadioPlayer_Example-dummy.m */; };
 		7DFEFCCD9D615D2F7EE080F3E23632CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		81BFB19A07C33EC801CE26FEAF2FD472 /* BFRadioPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8499331E4F2850174B13E2D17D22FCE9 /* BFRadioPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85689F74358FF1E2049431B36D6AB857 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB8624934E40F1A29CEB724A5B3A90 /* ReplaceMe.swift */; };
 		A4A7A86948B91BE4C84A319D4A61AD90 /* Pods-BFRadioPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EE353101DE71371AC363F3A397D8BB /* Pods-BFRadioPlayer_Tests-dummy.m */; };
 		C601AB2614566F2E6D38CDF6EE4679A4 /* Pods-BFRadioPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC5CE300CF0364E0C620A1D7D15641B9 /* Pods-BFRadioPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -38,29 +41,32 @@
 
 /* Begin PBXFileReference section */
 		07CC63113D84A7DEBF1D63B2DDFD96D5 /* Pods-BFRadioPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BFRadioPlayer_Tests.modulemap"; sourceTree = "<group>"; };
-		2E5F5093BABEA134C517919356DA24E4 /* BFRadioPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BFRadioPlayer.framework; path = BFRadioPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3247388F4774A5A4DB163AADD14968FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2E5F5093BABEA134C517919356DA24E4 /* BFRadioPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BFRadioPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3247388F4774A5A4DB163AADD14968FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		33B4271517DE9C92DA6CBEDA5AB68375 /* Pods-BFRadioPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BFRadioPlayer_Example.modulemap"; sourceTree = "<group>"; };
-		3E85C790FB8AB31F59D667036241BB27 /* Pods_BFRadioPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BFRadioPlayer_Tests.framework; path = "Pods-BFRadioPlayer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E85C790FB8AB31F59D667036241BB27 /* Pods_BFRadioPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFRadioPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BA986ABD5B9075CFE034A67D7AFBDC /* BFRadioPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BFRadioPlayer.modulemap; sourceTree = "<group>"; };
 		537A5C1FF1372DE82F48CB328C5EDFCF /* Pods-BFRadioPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BFRadioPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		57A88CF3215FB00B00FD4FFB /* BFRadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFRadioPlayer.swift; sourceTree = "<group>"; };
+		57A88CF7215FBD9800FD4FFB /* BFArtworkGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFArtworkGetter.swift; sourceTree = "<group>"; };
+		57A88CF9215FC36B00FD4FFB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		57A88CFB215FD69100FD4FFB /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66EE353101DE71371AC363F3A397D8BB /* Pods-BFRadioPlayer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BFRadioPlayer_Tests-dummy.m"; sourceTree = "<group>"; };
 		6D452D5EF417E61EDC1F1405F518F8BA /* BFRadioPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFRadioPlayer-dummy.m"; sourceTree = "<group>"; };
 		6D9DB0B0DA6D91E6075C63F9C907FE13 /* Pods-BFRadioPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadioPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		70AB8624934E40F1A29CEB724A5B3A90 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = BFRadioPlayer/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		72E068E7EE32472B9313E6A8D4D5C453 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E9647A7684B9703B2CA1007CC05707 /* Pods-BFRadioPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadioPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		78B597FFCB979F80136311B4B1848845 /* Pods-BFRadioPlayer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFRadioPlayer_Tests-resources.sh"; sourceTree = "<group>"; };
 		8499331E4F2850174B13E2D17D22FCE9 /* BFRadioPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFRadioPlayer-umbrella.h"; sourceTree = "<group>"; };
 		88E09E46FB925CC1A39F38CFFC9EAEEF /* BFRadioPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFRadioPlayer.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943573F50CE5272E84898EA69403B84E /* Pods-BFRadioPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BFRadioPlayer_Example-dummy.m"; sourceTree = "<group>"; };
 		9B48DA96568447C31B36CC0D8199809F /* Pods-BFRadioPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFRadioPlayer_Example-resources.sh"; sourceTree = "<group>"; };
 		9EB000E9D247939D2C02B4DA0FB2262B /* Pods-BFRadioPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BFRadioPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A25EA1129CD7D65F8F64456978E94923 /* Pods-BFRadioPlayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BFRadioPlayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AFD07E572D22E3542F7C7B40D7BF4B12 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9AD200D61ABC56ED70713A3C15FAAC7 /* BFRadioPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BFRadioPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9AD200D61ABC56ED70713A3C15FAAC7 /* BFRadioPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BFRadioPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C54AC7157C6271602F7D819627E823EC /* Pods-BFRadioPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadioPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6793D616A22857425058A266CCE0E9 /* Pods-BFRadioPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFRadioPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CBC9FB490E0BAC93BBEFDF165836F924 /* Pods-BFRadioPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BFRadioPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -68,9 +74,9 @@
 		D3500A42463A9CF200913C1401B0CBE6 /* Pods-BFRadioPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BFRadioPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DAAE898B706A8432F82D27E85AE40F1E /* Pods-BFRadioPlayer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFRadioPlayer_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DB20CD5BBE7EE6972CB359DA85337CF7 /* BFRadioPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFRadioPlayer-prefix.pch"; sourceTree = "<group>"; };
-		DBFD3003BCAFD839AA5F3A07C168CD14 /* Pods_BFRadioPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BFRadioPlayer_Example.framework; path = "Pods-BFRadioPlayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFD3003BCAFD839AA5F3A07C168CD14 /* Pods_BFRadioPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFRadioPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3440AFB41A16CF7445C81F4952880D /* Pods-BFRadioPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadioPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E9C5F5C16C0D3F8A1C357440097F2FCA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E9C5F5C16C0D3F8A1C357440097F2FCA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FC5CE300CF0364E0C620A1D7D15641B9 /* Pods-BFRadioPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BFRadioPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +115,15 @@
 				C354E48A33B67C3407B1D99040B4A03E /* Pods-BFRadioPlayer_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		57A88CFE215FE70300FD4FFB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				57A88CF9215FC36B00FD4FFB /* Reachability.swift */,
+				57A88CFB215FD69100FD4FFB /* Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		5ABCBCFE79894A16214E19CB84813990 /* Products */ = {
@@ -151,7 +166,9 @@
 		A42A6E890C7911E8E19A0E803CDC9826 /* BFRadioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				70AB8624934E40F1A29CEB724A5B3A90 /* ReplaceMe.swift */,
+				57A88CF3215FB00B00FD4FFB /* BFRadioPlayer.swift */,
+				57A88CF7215FBD9800FD4FFB /* BFArtworkGetter.swift */,
+				57A88CFE215FE70300FD4FFB /* Helpers */,
 				B2376B709432E5C1047AF95EC545D5CB /* Pod */,
 				F9860D6D4D460964B88A98DE4C6F87B1 /* Support Files */,
 			);
@@ -386,8 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A88CFC215FD69100FD4FFB /* Helpers.swift in Sources */,
+				57A88CF8215FBD9800FD4FFB /* BFArtworkGetter.swift in Sources */,
+				57A88CFA215FC36B00FD4FFB /* Reachability.swift in Sources */,
 				079EA705E4BD306B0729D056CB4D5234 /* BFRadioPlayer-dummy.m in Sources */,
-				85689F74358FF1E2049431B36D6AB857 /* ReplaceMe.swift in Sources */,
+				57A88CF4215FB00B00FD4FFB /* BFRadioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,8 +710,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -727,8 +746,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

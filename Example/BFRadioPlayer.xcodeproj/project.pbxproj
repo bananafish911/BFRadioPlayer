@@ -28,8 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3167FE23C1B1DFBDAAC33C50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3A968D91CBD1FEDAF5AD3EAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3167FE23C1B1DFBDAAC33C50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3A968D91CBD1FEDAF5AD3EAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5766BDBE2161EE7400790A94 /* BFRadioPlayer_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BFRadioPlayer_Example.entitlements; sourceTree = "<group>"; };
 		5A718581D23E81196C4F22DC /* Pods-BFRadioPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadioPlayer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadioPlayer_Example/Pods-BFRadioPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BFRadioPlayer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFRadioPlayer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +45,7 @@
 		67B37513457D3F7DB866D029 /* Pods_BFRadioPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFRadioPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78003EB8A8CDC90F819B0FD6 /* Pods_BFRadioPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFRadioPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6365619F9E7CFCFFC02EBCF /* Pods-BFRadioPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadioPlayer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadioPlayer_Example/Pods-BFRadioPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D46C2B5EB09ECE9D12A67D72 /* BFRadioPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BFRadioPlayer.podspec; path = ../BFRadioPlayer.podspec; sourceTree = "<group>"; };
+		D46C2B5EB09ECE9D12A67D72 /* BFRadioPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BFRadioPlayer.podspec; path = ../BFRadioPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DFEDB8536F1A2D37B8E1801A /* Pods-BFRadioPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadioPlayer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadioPlayer_Tests/Pods-BFRadioPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F58E589CBDD2FE6B17249309 /* Pods-BFRadioPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadioPlayer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadioPlayer_Tests/Pods-BFRadioPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +82,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				5766BDBE2161EE7400790A94 /* BFRadioPlayer_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BFRadioPlayer */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -212,7 +214,14 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = WPW5M885N8;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -481,11 +490,15 @@
 			baseConfigurationReference = B6365619F9E7CFCFFC02EBCF /* Pods-BFRadioPlayer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPW5M885N8;
 				INFOPLIST_FILE = BFRadioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -496,11 +509,15 @@
 			baseConfigurationReference = 5A718581D23E81196C4F22DC /* Pods-BFRadioPlayer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPW5M885N8;
 				INFOPLIST_FILE = BFRadioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
